@@ -9,15 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@paypal/react-paypal-js": "^8.3.0",
     "axios": "^1.6.8",
     "bcryptjs": "^2.4.3",
+    "mongoose": "^8.3.4",
     "next": "14.2.3",
+    "next-auth": "^5.0.0-beta.18",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.51.4",
-    "swr": "^2.2.5"
+    "react-hot-toast": "^2.4.1",
+    "swr": "^2.2.5",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
