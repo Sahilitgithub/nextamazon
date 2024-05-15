@@ -18,4 +18,4 @@ export const POST = auth(async (...request: any) => {
     }else {
         return Response.json({message: "Order not found"}, {status:404})
     }
-})
+}) as any

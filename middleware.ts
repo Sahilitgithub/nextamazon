@@ -1,5 +1,22 @@
 
-export { auth as middleware } from './lib/auth'
+const authConfig = {
+  providers: [],
+  callbacks: {
+    authorized({request, auth}: any) {
+      const protectedPaths = [
+          /\/shipping/,
+          /\/payment/,
+          /\/place-order/,
+          /\/profile/,
+          /\/order\/(.*)/,
+          /\/admin/,
+      ]
+      const {pathname} = request.nextUrl;
+      if(protectedPaths.some((p) => p.test(pathname))) return !!auth
+      return true;
+    },
+  }
+}
 
 export const config = {
     matcher: [

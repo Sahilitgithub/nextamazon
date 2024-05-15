@@ -19,4 +19,4 @@ export const PUT = auth(async (req) => {
     } catch (error: any) {
         return Response.json({message: error.message}, {status: 500})
     }
-})
+}) as any
