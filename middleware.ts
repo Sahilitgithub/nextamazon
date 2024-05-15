@@ -1,3 +1,4 @@
+import NextAuth, { NextAuthConfig } from "next-auth";
 
 const authConfig = {
   providers: [],
@@ -16,7 +17,9 @@ const authConfig = {
       return true;
     },
   }
-}
+} satisfies NextAuthConfig
+
+export const {auth: middleware} = NextAuth(authConfig);
 
 export const config = {
     matcher: [
